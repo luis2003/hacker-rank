@@ -1,7 +1,7 @@
 import unittest
 import sys
 from io import StringIO
-from source.greetingprinter.main import GreetingPrinter
+from .context import greetingprinter
 
 
 class TestGreetingPrinter(unittest.TestCase):
@@ -20,7 +20,7 @@ class TestGreetingPrinter(unittest.TestCase):
         expected_output = "Hello, World!"
 
         # Act
-        a_greeting_printer = GreetingPrinter()
+        a_greeting_printer = greetingprinter.GreetingPrinter()
         a_greeting_printer.print_two_part_greeting(greeting_str_part1, greeting_str_part2)
 
         self.assertEqual(self.held_output.getvalue(), expected_output)
