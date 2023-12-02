@@ -1,17 +1,9 @@
 import unittest
-import sys
-from io import StringIO
 from .context import greetingprinter
+from .base_test_stdout import BaseTestStdout
 
 
-class TestGreetingPrinter(unittest.TestCase):
-    def setUp(self):
-        self.original_stdout = sys.stdout
-        self.held_output = StringIO()
-        sys.stdout = self.held_output
-
-    def tearDown(self) -> None:
-        sys.stdout = self.original_stdout
+class TestGreetingPrinter(BaseTestStdout):
 
     def test_print_two_part_greeting(self):
         # Arrange
