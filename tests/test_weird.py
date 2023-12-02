@@ -23,6 +23,15 @@ class WeirdTestCase(BaseTestStdout):
 
         self.assertEqual(result, expected_output)
 
+    def test_even_six_to_twenty_is_weird(self):
+        input_value = 6
+        expected_output = "Weird"
+
+        result = weird.determine_weirdness(input_value)
+
+        self.assertEqual(result, expected_output)
+
+
 
 if __name__ == '__main__':
     unittest.main()
