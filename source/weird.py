@@ -24,4 +24,8 @@ def _is_in_six_to_twenty_range(value: int) -> bool:
 
 
 if __name__ == '__main__':
-    print(determine_weirdness(int(input("enter an integer value: "))))
+    try:
+        user_input = int(input("enter an integer value: "))
+        print(determine_weirdness(user_input))
+    except ValueError:
+        print("Invalid input. Please enter an integer.")
