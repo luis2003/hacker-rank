@@ -10,18 +10,13 @@ def determine_weirdness(input_value: int):
 
 
 def _is_odd(value: int) -> bool:
-    if value % 2 != 0:
-        return True
-    return False
+    return value % 2 != 0
 
 
 def _in_six_to_twenty_inclusive_range(value: int) -> bool:
-    if 6 <= value <= 20:
-        return True
-    return False
+    return 6 <= value <= 20
 
 
 def _is_greater_than_twenty(value: int) -> bool:
-    if value > 20:
-        return True
-    return False
+    return value > 20
+
