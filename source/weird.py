@@ -1,5 +1,5 @@
 def determine_weirdness(input_value: int):
-    if _is_even(input_value):
+    if _is_odd(input_value):
         print("Weird")
     elif _in_six_to_twenty_inclusive_range(input_value):
         print("Weird")
@@ -9,7 +9,7 @@ def determine_weirdness(input_value: int):
         print("Not Weird")
 
 
-def _is_even(value: int) -> bool:
+def _is_odd(value: int) -> bool:
     if value % 2 != 0:
         return True
     return False
