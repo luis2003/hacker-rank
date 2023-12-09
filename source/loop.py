@@ -4,4 +4,4 @@ def get_previous_squares(input_value: int) -> list:
     :param input_value: an integer
     :return: a list containing the squares of all non-negative integers less than input
     """
-    return [0, 1, 4]
+    return [index * index for index in range(input_value)]
