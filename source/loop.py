@@ -1,9 +1,10 @@
 from typing import List
 
 
-def get_previous_squares(input_value: int) -> List[int]:
+def calculate_previous_squares(input_value: int) -> List[int]:
     """
-    calculate the squares of all non-negative integers less than the input value
+    Return a list with the calculated squares of all non-negative integers less than the input value
+
     :param input_value: an integer
     :return: a list containing the squares of all non-negative integers less than input
     """
@@ -12,6 +13,6 @@ def get_previous_squares(input_value: int) -> List[int]:
 
 def print_previous_squares(input_value: int) -> None:
     """print each value in separate line """
-    for value in get_previous_squares(input_value):
+    for value in calculate_previous_squares(input_value):
         print(value)
 

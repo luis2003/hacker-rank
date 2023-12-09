@@ -18,7 +18,7 @@ class LoopTestCase(unittest.TestCase):
         input_value = 3
         expected_output = [0, 1, 4]
 
-        actual_output = loop.get_previous_squares(input_value)
+        actual_output = loop.calculate_previous_squares(input_value)
 
         self.assertEqual(actual_output, expected_output)
 
@@ -26,7 +26,7 @@ class LoopTestCase(unittest.TestCase):
         input_value = 5
         expected_output = [0, 1, 4, 9, 16]
 
-        actual_output = loop.get_previous_squares(input_value)
+        actual_output = loop.calculate_previous_squares(input_value)
 
         self.assertEqual(actual_output, expected_output)
 
