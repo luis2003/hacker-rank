@@ -1,4 +1,7 @@
-def get_previous_squares(input_value: int) -> list:
+from typing import List
+
+
+def get_previous_squares(input_value: int) -> List[int]:
     """
     calculate the squares of all non-negative integers less than the input value
     :param input_value: an integer
