@@ -5,7 +5,7 @@ from base_test_stdout import BaseTestStdout
 
 class LoopPrintingTestCase(BaseTestStdout):
     def test_print_input_3(self):
-        input_value = 3
+        input_value = [0, 1, 4]
         expected_output = "0\n1\n4\n"
 
         loop.print_previous_squares(input_value)

@@ -16,16 +16,16 @@ def calculate_previous_squares(input_value: int) -> List[int]:
     return [index * index for index in range(input_value)]
 
 
-def print_previous_squares(input_value: int) -> None:
-    """print each value in separate line """
-    squares = calculate_previous_squares(input_value)
+def print_previous_squares(squares: List[int]) -> None:
+    """print each value in a separate line """
     print('\n'.join(map(str, squares)))
 
 
 def main() -> None:
     try:
         n = int(input(f"Enter an integer between {MIN_INPUT_VALUE} and {MAX_INPUT_VALUE}: "))
-        print_previous_squares(n)
+        squares = calculate_previous_squares(n)
+        print_previous_squares(squares)
     except ValueError as e:
         print(f"Error: {e}")
 
