@@ -24,8 +24,11 @@ def print_previous_squares(squares: List[int]) -> None:
 def main() -> None:
     try:
         n = int(input(f"Enter an integer between {MIN_INPUT_VALUE} and {MAX_INPUT_VALUE}: "))
-        squares = calculate_previous_squares(n)
-        print_previous_squares(squares)
+        if MIN_INPUT_VALUE <= n <= MAX_INPUT_VALUE:
+            squares = calculate_previous_squares(n)
+            print_previous_squares(squares)
+        else:
+            raise ValueError(f"Input value must be between {MIN_INPUT_VALUE} and {MAX_INPUT_VALUE}")
     except ValueError as e:
         print(f"Error: {e}")
 
