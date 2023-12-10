@@ -4,7 +4,7 @@ MIN_INPUT_VALUE = 1
 MAX_INPUT_VALUE = 20
 
 
-def calculate_previous_squares(input_value: int) -> List[int]:
+def calculate_squares(input_value: int) -> List[int]:
     """
     Return a list with the calculated squares of all non-negative integers less than the input value
 
@@ -25,7 +25,7 @@ def main() -> None:
     try:
         n = int(input(f"Enter an integer between {MIN_INPUT_VALUE} and {MAX_INPUT_VALUE}: "))
         if MIN_INPUT_VALUE <= n <= MAX_INPUT_VALUE:
-            squares = calculate_previous_squares(n)
+            squares = calculate_squares(n)
             print_previous_squares(squares)
         else:
             raise ValueError(f"Input value must be between {MIN_INPUT_VALUE} and {MAX_INPUT_VALUE}")
